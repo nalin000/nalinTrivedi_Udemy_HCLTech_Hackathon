@@ -1,0 +1,20 @@
+ public static void step3(WebDriver driver, WebDriverWait wait) throws InterruptedException {
+    	try {
+        WebElement searchBox = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.name("q"))
+        );
+
+        searchBox.sendKeys("Python");
+        searchBox.sendKeys(Keys.ENTER);
+        System.out.println("Step 3 passed: Search performed");
+    	}
+    	
+    	
+    	
+    	catch (Exception e) {
+            System.out.println("Search not performed");
+        }
+        
+
+        Thread.sleep(5000);
+    }
